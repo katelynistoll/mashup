@@ -1,15 +1,18 @@
-var tagname = 'craigscustomcornholes';
+    function instaSearch() {
+      var tagname = document.getElementById("input").value;
 
-$.ajax({
-        url: 'https://api.instagram.com/v1/tags/'+tagname+'/media/recent?client_id=c1108290c34240808da4c980016c49e1',
+      $.ajax({
+        url: 'https://api.instagram.com/v1/tags/'+tagname+'/media/recent?client_id=c1108290c34240808da4c980016c49e1&callback=YOUR-CALLBACK',
         dataType: 'jsonp',
         success: function(result){
-          for (var i = 0; i < 5; i++){
+          for (var i = 0; i < 1; i++){
             var url = result.data[i].images.thumbnail.url;
-            $('body').append('<img src="' + url + '"/>');
+            var instapic = '<img src="' + url + '"/>';
+            $('body').append(instapic);
           }
         }
-      });
+      })
+    };
 
 //INSTAGRAM CLIENT REGISTRATION
 //Mashup Project

@@ -11,8 +11,8 @@
             $('body').append(instapic);
           }
         }
-      })
-    };
+      });
+    }
 
 //INSTAGRAM CLIENT REGISTRATION
 //Mashup Project

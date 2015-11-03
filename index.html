@@ -5,13 +5,39 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript" src="mashup.js"></script>
+	<link rel="stylesheet" type="text/css" href="mashup.css">
 </head>
 
 <body>
-	<form id="form" onsubmit="return false;">
-		<input type="text" id="input" />
-		<input type="submit" onclick="instaSearch();"/>
-	</form>
+
+	<h1>Mashup Project</h1>
+
+
+	<div id="firstPic" class="pic">
+		<form class="form" onsubmit="return false;">
+			<input type="text" placeholder="ANIMAL"/>
+			<input type="submit" value="OK" onclick="instaSearch(this);"/>
+		</form>
+	</div>
+
+
+	<div id="secondPic" class="pic">
+		<form class="form" onsubmit="return false;">
+			<input type="text" placeholder="REPTILE"/>
+			<input type="submit" value="OK" onclick="instaSearch(this);"/>
+		</form>
+	</div>
+
+	<div id="thirdPic" class="pic">
+		<form class="form" onsubmit="return false;">
+			<input type="text" placeholder="OBJECT"/>
+			<input type="submit" value="OK" onclick="instaSearch(this);"/>
+		</form>
+	</div>
+
 </body>
 
 </html> 
+
+<!-- Change id="input" to a class-->
+<!-- appending to body instead of div -->

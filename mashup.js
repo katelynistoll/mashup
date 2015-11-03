@@ -1,5 +1,11 @@
-    function instaSearch() {
-      var tagname = document.getElementById("input").value;
+// var inputPics = [];
+
+function instaSearch(button) {
+      //user input
+      console.log(button);
+      var searchForm = button.parentElement;
+      var tagname = searchForm.querySelector('input[type="text"]').value;
+      var currentDiv = button.parentElement.parentElement;
 
       $.ajax({
         url: 'https://api.instagram.com/v1/tags/'+tagname+'/media/recent?client_id=c1108290c34240808da4c980016c49e1&callback=YOUR-CALLBACK',
@@ -8,11 +14,20 @@
           for (var i = 0; i < 1; i++){
             var url = result.data[i].images.thumbnail.url;
             var instapic = '<img src="' + url + '"/>';
-            $('body').append(instapic);
+            // inputPics.push(instapic);
+                // $(this).append(instapic);
+                $(currentDiv).append(instapic);
+                // $('#firstPic').append(inputPics[0]);
+                // $('#secondPic').append(inputPics[1]);
+                // $('#thirdPic').append(inputPics[2]);
+                // $('#fourthPic').append(inputPics[3]);
+                // $('#fifthPic').append(inputPics[4]);
           }
         }
       });
     }
+
+//take out as much hard coding as possible (ids)
 
 //INSTAGRAM CLIENT REGISTRATION
 //Mashup Project

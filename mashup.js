@@ -1,33 +1,26 @@
-// var inputPics = [];
+
 
 function instaSearch(button) {
-      //user input
-      console.log(button);
-      var searchForm = button.parentElement;
-      var tagname = searchForm.querySelector('input[type="text"]').value;
-      var currentDiv = button.parentElement.parentElement;
+  
+  var searchForm = button.parentElement;
+  var tagname = searchForm.querySelector('input[type="text"]').value;
+  var currentDiv = button.parentElement.parentElement;
 
-      $.ajax({
-        url: 'https://api.instagram.com/v1/tags/'+tagname+'/media/recent?client_id=c1108290c34240808da4c980016c49e1&callback=YOUR-CALLBACK',
-        dataType: 'jsonp',
-        success: function(result){
-          for (var i = 0; i < 1; i++){
-            var url = result.data[i].images.thumbnail.url;
-            var instapic = '<img src="' + url + '"/>';
-            // inputPics.push(instapic);
-                // $(this).append(instapic);
-                $(currentDiv).append(instapic);
-                // $('#firstPic').append(inputPics[0]);
-                // $('#secondPic').append(inputPics[1]);
-                // $('#thirdPic').append(inputPics[2]);
-                // $('#fourthPic').append(inputPics[3]);
-                // $('#fifthPic').append(inputPics[4]);
-          }
-        }
-      });
+  $.ajax({
+    url: 'https://api.instagram.com/v1/tags/'+tagname+'/media/recent?client_id=c1108290c34240808da4c980016c49e1&callback=YOUR-CALLBACK',
+    dataType: 'jsonp',
+    success: function(result){
+      for (var i = 0; i < 1; i++){
+        var url = result.data[i].images.thumbnail.url;
+        var instapic = '<img src="' + url + '"/>';
+
+        $(currentDiv).append(instapic);
+
+      }
     }
+  });
+}
 
-//take out as much hard coding as possible (ids)
 
 //INSTAGRAM CLIENT REGISTRATION
 //Mashup Project

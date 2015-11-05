@@ -1,7 +1,5 @@
-
-
 function instaSearch(button) {
-  
+
   var searchForm = button.parentElement;
   var tagname = searchForm.querySelector('input[type="text"]').value;
   var currentDiv = button.parentElement.parentElement;
@@ -31,3 +29,12 @@ function instaSearch(button) {
 // REDIRECT URI	http://oit2.scps.nyu.edu/~stollk/
 // SUPPORT EMAIL	katelynistoll@gmail.com
 // Final Project for NYU Advanced JavaScript Class
+
+
+//MY NOTES - 
+//got stuck trying to dynamically add event handler to elements
+//could not pass in 'this' parameter (?)
+// var submitForm = document.getElementsByClassName("submitForm"); //WORKED
+// // submitForm.onclick = instaSearch; //DID NOT WORK
+// // submitForm.onclick = instaSearch.this; //DID NOT WORK
+// $(submitForm).on("click", instaSearch(this)); //DID NOT WORK

@@ -1,43 +1,11 @@
-# Mashup project
-
-This project is open-ended! Requirements:
+# Mashup Project Assignment
 
 * Build a site that uses data from at least one external API in an interesting, interactive way.
-* Replace this README with a description of the project.
-* You are welcome to use any 3rd-party libraries/frameworks – just load them from a CDN (e.g. [cdnjs](http://cdnjs.com)), or put them under the [`vendor/`](vendor/) folder.
 
-The JS code should be **non-trivial**. That being said... start simple! (Just get the data to show up on the page.) No server-side coding is required, but feel free to create a backend in whatever language if you like, if you need one.
 
-* [AJAX demos](https://github.com/advanced-js/deck/tree/gh-pages/demos/ajax)
-* [inspiration?](http://www.programmableweb.com/mashups)
+This project is a form of "Mad Libs." Rather than having the user input nouns, adjectives, and verbs (as with traditional Mad Libs), the user is prompted to input LOCATION, FOOD, PET, and DESSERT, as these categories are better represented with imagery.
 
-## Finding an API
+Uses the Instagram API: User inputs a keyword and the API fetches the image that was most recently tagged with that keyword.
 
-A couple things to look for in an API (or at least the endpoints you're using) for this project:
+**WARNING:** This project pulls in the image most recently tagged with the matching keyword, which can be any image posted by anyone. There is no control over how relevant the actual image is to the keyword, or what the image is at all. 
 
-* Make sure it doesn't require authentication (e.g. [OAuth](http://oauth.net/)).
-    * You need a server to do this.
-* If the API doesn't support cross-domain requests (JSONP or CORS), you will need to use [JSONProxy](https://jsonp.afeld.me/).
-
-Here is a [list of API suggestions](https://gist.github.com/afeld/4952991).
-
-## V1
-
-Get the data to show up on the page.
-
-## V2
-
-First pass. Get your main feature working in the simplest way possible.
-
-## V3
-
-Iterate!
-
-* Refactor
-* Add a new feature
-
-## Bonus points
-
-* automated tests
-    * [Sinon.js fakeServer](http://sinonjs.org/docs/#fakeServer) may be helpful
-* fancy interactivity/animations
